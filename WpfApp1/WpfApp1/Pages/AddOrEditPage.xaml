@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:WpfApp1.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="AddOrEditPage">
+      Title="ИС по прокату спортивного инвентаря - Добавление/Редактирование">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -23,47 +23,47 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Grid.Column="0">
-            <Label Content="Фамилия" Margin="0,0,0,40"></Label>
+            <Label Content="Фамилия" Margin="0,0,0,35"></Label>
             <TextBox x:Name="LastNameBox" Margin="10,20,10,10"></TextBox>
         </Grid>
         <Grid Grid.Row="1" Grid.Column="0">
-            <Label Content="Имя" Margin="0,0,0,40"></Label>
+            <Label Content="Имя" Margin="0,0,0,35"></Label>
             <TextBox x:Name="FirstNameBox" Margin="10,20,10,10"></TextBox>
         </Grid>
         <Grid Grid.Row="2" Grid.Column="0">
-            <Label Content="Отчество" Margin="0,0,0,40"></Label>
+            <Label Content="Отчество" Margin="0,0,0,35"></Label>
             <TextBox x:Name="PatronymicBox" Margin="10,20,10,10"></TextBox>
         </Grid>
         <Grid Grid.Row="3" Grid.Column="0">
-            <Label Content="Должность" Margin="0,0,0,40"></Label>
-            <ComboBox x:Name="RoleComboBox" Margin="10,20,10,10"></ComboBox>
+            <Label Content="Должность" Margin="0,0,0,35"></Label>
+            <ComboBox x:Name="RoleComboBox" Margin="10,20,10,10" DisplayMemberPath="Role.Name"></ComboBox>
         </Grid>
         <Grid Grid.Row="4" Grid.Column="0">
-            <Label Content="Дата рождения" Margin="0,0,0,40"></Label>
-            <DatePicker x:Name="DateOfBirthBox" Margin="10,20,10,10"></DatePicker>
+            <Label Content="Дата рождения" Margin="0,0,0,35"></Label>
+            <DatePicker x:Name="DateOfBirthBox" Margin="10,25,10,10"></DatePicker>
         </Grid>
         <Grid Grid.Row="5" Grid.Column="0">
-            <Label Content="Телефон" Margin="0,0,0,40"></Label>
+            <Label Content="Телефон" Margin="0,0,0,35"></Label>
             <TextBox x:Name="PhoneNumberBox" Margin="10,20,10,10"></TextBox>
         </Grid>
         <Grid Grid.Row="0" Grid.Column="1">
-            <Label Content="Пол" Margin="0,0,0,40"></Label>
-            <TextBox x:Name="GenderBox" Margin="10,20,10,10"></TextBox>
+            <Label Content="Пол" Margin="0,0,0,35"></Label>
+            <ComboBox x:Name="GenderBox" Margin="10,20,10,10" DisplayMemberPath="Gender.Name"></ComboBox>
         </Grid>
         <Grid Grid.Row="1" Grid.Column="1">
-            <Label Content="Почта" Margin="0,0,0,40"></Label>
+            <Label Content="Почта" Margin="0,0,0,35"></Label>
             <TextBox x:Name="EmailBox" Margin="10,20,10,10"></TextBox>
         </Grid>
         <Grid Grid.Row="2" Grid.Column="1">
-            <Label Content="Логин" Margin="0,0,0,40"></Label>
+            <Label Content="Логин" Margin="0,0,0,35"></Label>
             <TextBox x:Name="LoginBox" Margin="10,20,10,10"></TextBox>
         </Grid>
         <Grid Grid.Row="3" Grid.Column="1">
-            <Label Content="Пароль" Margin="0,0,0,40"></Label>
+            <Label Content="Пароль" Margin="0,0,0,35"></Label>
             <PasswordBox x:Name="PasswordTextBox" Margin="10,20,10,10"></PasswordBox>
         </Grid>
         <Grid Grid.Row="4" Grid.Column="1">
-            <Label Content="Подтверждение пароля" Margin="0,0,0,40"></Label>
+            <Label Content="Подтверждение пароля" Margin="0,0,0,35"></Label>
             <PasswordBox x:Name="AcceptPasswordBox" Margin="10,20,10,10"></PasswordBox>
         </Grid>
         <Grid Grid.Row="6" Grid.Column="0">

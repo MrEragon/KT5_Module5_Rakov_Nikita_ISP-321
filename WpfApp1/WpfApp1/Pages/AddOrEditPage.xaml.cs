@@ -27,7 +27,10 @@ namespace WpfApp1.Pages
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (Classes.Manager.MainFrame.CanGoBack)
+            {
+                Classes.Manager.MainFrame.GoBack();
+            }
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)

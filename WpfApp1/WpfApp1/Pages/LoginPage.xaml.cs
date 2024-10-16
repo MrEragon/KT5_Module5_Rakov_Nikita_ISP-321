@@ -42,9 +42,31 @@ namespace WpfApp1.Pages
                 if(error.Length > 1)
                 {
                     MessageBox.Show(error.ToString(), "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
                 }
 
-                if ()
+                if (Data.KT05Entities.GetContext().Users.Any(d => d.Login == LoginBox.Text && d.Password == PasswordTextBox.Password))
+                {
+                    var user = Data.KT05Entities.GetContext().Users.Where(d => d.Login == LoginBox.Text && d.Password == PasswordTextBox.Password).FirstOrDefault();
+                    switch (user.Role.Name)
+                    {
+                        case "Администратор":
+                            {
+                                Classes.Manager.MainFrame.Navigate(new Pages.ListViewPage());
+                                break;
+                            }
+                        case "Менеджер":
+                            {
+                                Classes.Manager.MainFrame.Navigate(new Pages.ListViewPage());
+                                break;
+                            }
+                        case "Исполнитель":
+                            {
+                                Classes.Manager.MainFrame.Navigate(new Pages.ListViewPage());
+                                break;
+                            }
+                    }
+                }
             }
             catch
             {
