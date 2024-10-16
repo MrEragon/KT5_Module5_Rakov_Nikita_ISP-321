@@ -68,9 +68,9 @@ namespace WpfApp1.Pages
                     }
                 }
             }
-            catch
+            catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
         }
     }
